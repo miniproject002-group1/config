@@ -1,0 +1,32 @@
+server:
+  port: 9001
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/category_db # --- IMPORTANT: Make sure a database named 'category_db' exists
+    username: your_postgres_user
+    password: your_postgres_password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0 # Traces 100% of requests. Good for development, might be lowered in production.
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans # Default Zipkin server URL
