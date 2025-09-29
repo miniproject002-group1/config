@@ -7,7 +7,7 @@ spring:
         webflux:
           routes:
             - id: category-service-route
-              uri: lb://category-service
+              uri: lb://CATEGORY-SERVICE
               predicates:
                 - Path=/api/v1/categories/**
   security:
