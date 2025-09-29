@@ -1,0 +1,17 @@
+server:
+  port: 9003
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+app:
+  keycloak:
+    server-url: http://localhost:8181
+    realm: master
+    client-id: admin-cli
+    username: admin
+    password: admin
