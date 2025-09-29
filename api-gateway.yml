@@ -40,3 +40,5 @@ springdoc:
   group-configs:
     - display-name: Category Service
       paths-to-match: /api/v1/categories/**
+    - display-name: User Management Service
+      paths-to-match: /api/v1/users/**
