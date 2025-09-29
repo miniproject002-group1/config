@@ -1,13 +1,6 @@
 spring:
-  #  cloud:
-  #    gateway:
-  #      server:
-  #        webflux:
-  #          routes:
-  #            - id: category-service-route
-  #              uri: lb://CATEGORY-SERVICE
-  #              predicates:
-  #                - Path=/api/v1/categories/**
+  main:
+    web-application-type: reactive
   security:
     oauth2:
       resourceserver:
@@ -15,7 +8,6 @@ spring:
           issuer-uri: http://localhost:8181/realms/spring-microservices-realm
 server:
   port: 8080
-
 
 eureka:
   client:
@@ -33,12 +25,17 @@ management:
       endpoint: http://localhost:9411/api/v2/spans
 
 springdoc:
+  discovery:
+    enabled: true
   api-docs:
     path: /api-docs
   swagger-ui:
     path: /swagger-ui.html
   group-configs:
-    - display-name: Category Service
+    - name: category-service
+      display-name: Category Service
       paths-to-match: /api/v1/categories/**
-    - display-name: User Management Service
+    - name: keycloak-admin-client
+      display-name: User Management Service
       paths-to-match: /api/v1/users/**
+
