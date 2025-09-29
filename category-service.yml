@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/category_db # --- IMPORTANT: Make sure a database named 'category_db' exists
+    url: jdbc:postgresql://localhost:5433/category_db # --- IMPORTANT: Make sure a database named 'category_db' exists
     username: category_db
     password: category_db
     driver-class-name: org.postgresql.Driver
