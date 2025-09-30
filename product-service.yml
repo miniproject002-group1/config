@@ -1,10 +1,10 @@
 server:
-  port: 9002
+  port: 9004
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5434/category_db # --- IMPORTANT: Make sure a database named 'category_db' exists
-    username: category_user
+    url: jdbc:postgresql://localhost:5435/product_db # --- IMPORTANT: Make sure a database named 'category_db' exists
+    username: product_user
     password: password
     driver-class-name: org.postgresql.Driver
   jpa:
