@@ -11,7 +11,7 @@ eureka:
 app:
   keycloak:
     server-url: http://localhost:8181
-    realm: master
-    client-id: admin-cli
+    realm: spring-microservices-realm
+    client-id: api-gateway-client
     username: admin
     password: admin
