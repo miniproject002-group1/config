@@ -19,13 +19,6 @@ spring:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-  config:
-    import: "optional:configserver:http://localhost:8888" # optional import
-  cloud:
-    config:
-      uri: http://localhost:8888
-      fail-fast: true   # ensures startup fails clearly if config server is unreachable
-
 eureka:
   client:
     service-url:
