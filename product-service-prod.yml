@@ -21,7 +21,14 @@ spring:
       resource-server:
         jwt:
           issuer-uri: http://localhost:8181/realms/spring-microservices-realm
-
+  circuitbreaker:
+    instances:
+      categoryService:
+        failure-rate-threshold: 80       # Trip breaker on 50% failures
+        sliding-window-size: 4           # Only need 4 calls to check
+        wait-duration-in-open-state: 5s    # Stay open for 5 seconds
+        permitted-number-of-calls-in-half-open-state: 2
+      
 eureka:
   client:
     service-url:
