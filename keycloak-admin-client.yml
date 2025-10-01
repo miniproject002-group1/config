@@ -14,5 +14,3 @@ app:
     realm: spring-microservices-realm
     client-id: api-gateway-client
     client-secret: EYqVsRlRRNTqMY7VVpNGZDgDPV1IMx3K
-    username: admin
-    password: admin
