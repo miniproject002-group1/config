@@ -36,12 +36,16 @@ resilience4j:
         wait-duration-in-open-state: 5s    # Stay open for 5 seconds
         permitted-number-of-calls-in-half-open-state: 2
         automatic-transition-from-open-to-half-open-enabled: true
+        ignoreExceptions:
+        - com.example.productservice.exception.NotFoundException
       userService:
         failure-rate-threshold: 50       # Trip breaker on 50% failures
         sliding-window-size: 4           # Only need 4 calls to check
         wait-duration-in-open-state: 5s    # Stay open for 5 seconds
         permitted-number-of-calls-in-half-open-state: 2
         automatic-transition-from-open-to-half-open-enabled: true
+        ignoreExceptions:
+        - com.example.productservice.exception.NotFoundException
 eureka:
   client:
     service-url:
