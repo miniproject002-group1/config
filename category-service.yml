@@ -18,10 +18,13 @@ spring:
 
 resilience4j:
   circuitbreaker:
+    configs:
+        default:
+          ignore-exceptions:
+            - com.example.categoryservice.exception.NotFoundException
     instances:
       userCB:
-        ignore-exceptions:
-          - com.example.categoryservice.exception.NotFoundException
+        base-config: default
         record-exceptions:
           - feign.FeignException
           - java.net.ConnectException
