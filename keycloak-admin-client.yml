@@ -10,7 +10,7 @@ eureka:
     
 app:
   keycloak:
-    server-url: http://localhost:8181
+    server-url: https://my-keycloak.ddns.net
     realm: spring-microservices-realm
     client-id: api-gateway-client
-    client-secret: VNqUvCdZnksjmW0A02qwistyiqlHGNRq
+    client-secret: lhZvA4R3OtOdMqzQZS6NJl8CN7tfavOb
