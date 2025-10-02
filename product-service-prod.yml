@@ -21,6 +21,7 @@ spring:
       resource-server:
         jwt:
           issuer-uri: http://localhost:8181/realms/spring-microservices-realm
+resilience4j:
   circuitbreaker:
     instances:
       categoryService:
