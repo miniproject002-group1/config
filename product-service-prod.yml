@@ -21,6 +21,12 @@ spring:
       resource-server:
         jwt:
           issuer-uri: http://localhost:8181/realms/spring-microservices-realm
+
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
+        
 resilience4j:
   circuitbreaker:
     instances:
