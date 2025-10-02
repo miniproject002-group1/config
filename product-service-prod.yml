@@ -20,7 +20,7 @@ spring:
     oauth2:
       resource-server:
         jwt:
-          issuer-uri: http://localhost:8181/realms/spring-microservices-realm
+          issuer-uri: https://my-keycloak.ddns.net/realms/spring-microservices-realm
 
   cloud:
     openfeign:
