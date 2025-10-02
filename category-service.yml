@@ -21,8 +21,7 @@ resilience4j:
     instances:
       userCB:
         record-exceptions:
-          - feign.FeignException
-          - java.net.ConnectException
+          - java.lang.RuntimeException
         register-health-indicator: true
         sliding-window-size: 5
         minimum-number-of-calls: 3
