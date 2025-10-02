@@ -25,10 +25,13 @@ resilience4j:
   circuitbreaker:
     instances:
       categoryService:
-        failure-rate-threshold: 80       # Trip breaker on 50% failures
+        register-health-indicator: true
+        event-consumer-buffer-size: 10
+        failure-rate-threshold: 50       # Trip breaker on 50% failures
         sliding-window-size: 4           # Only need 4 calls to check
         wait-duration-in-open-state: 5s    # Stay open for 5 seconds
         permitted-number-of-calls-in-half-open-state: 2
+        automatic-transition-from-open-to-half-open-enabled: true
       
 eureka:
   client:
