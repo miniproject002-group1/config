@@ -20,6 +20,9 @@ resilience4j:
   circuitbreaker:
     instances:
       userCB:
+        record-exceptions:
+          - feign.FeignException
+          - java.net.ConnectException
         register-health-indicator: true
         sliding-window-size: 5
         minimum-number-of-calls: 3
